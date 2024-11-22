@@ -35,7 +35,7 @@
             }
         }
 
-        // O(n)
+      
         public T this[int index]
         {
             get
@@ -50,8 +50,7 @@
             }
         }
 
-        // O(1)
-        // Implementation where the tail is not stored will have O(n) complexity instead.
+    
         public void Add(T item)
         {
             if (this.Count == 0)
@@ -70,7 +69,7 @@
             this.Count++;
         }
 
-        // O(1)
+     
         public void Clear()
         {
             if (this.Count > 0)
@@ -80,13 +79,13 @@
             }
         }
 
-        // O(n)
+      
         public bool Contains(T item)
         {
             return this.IndexOf(item) >= 0;
         }
 
-        // O(n)
+      
         public void CopyTo(T[] array, int arrayIndex)
         {
             if (array == null || array.Length == 0)
@@ -109,7 +108,7 @@
             }
         }
 
-        // O(n)
+      
         public int IndexOf(T item)
         {
             var current = this.head;
@@ -125,7 +124,7 @@
             return -1;
         }
 
-        // O(n)
+       
         public void Insert(int index, T item)
         {
             this.ValidateIndex(index);
@@ -139,7 +138,7 @@
             this.Count++;
         }
 
-        // O(n)
+       
         public bool Remove(T item)
         {
             var index = this.IndexOf(item);
@@ -149,7 +148,7 @@
             return true;
         }
 
-        // O(n)
+      
         public void RemoveAt(int index)
         {
             this.ValidateIndex(index);
@@ -179,7 +178,7 @@
             return this.GetEnumerator();
         }
 
-        // O(n)
+     
         private Node GetNode(int index)
         {
             var current = this.head;
